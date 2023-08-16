@@ -1,0 +1,26 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 50vh;
+    width: 50vw;
+    background-color: rgb(41, 153, 41);
+    border-radius: .70rem;
+    display: center;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    margin-top: 15%;
+    margin-left: 18%;
+}
+
+#img {
+    margin-left: 38%;
+}

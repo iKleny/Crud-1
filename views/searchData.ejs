@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <h1>Dados abaixo</h1>
+    <table id="table" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Login</th>
+                <th>Tipo</th>
+                <th>Credito</th>
+                <th>Data</th>
+                <th>Debito</th>
+                <th>Motivo</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <% for(let i = 0; i < array.length; i++) { %>
+
+            <tr>
+                    <td> <a href="/att/<%= array[i].id %>"> >ATUALIZAR</a> </td>
+
+                    <td> <a href="/remove/<%= array[i].id %>">EXCLUIR</a> </td>
+
+                    <td><%= array[i].nome %></td>
+                    
+                    <td><%= array[i].tipo %></td>
+                    
+                    <td><%= array[i].credito %></td>
+                    
+                    <td><%= array[i].data %></td>
+                    
+                    <td><%= array[i].debito %></td>
+                    
+                    <td><%= array[i].motivo %></td>
+            </tr>
+
+            <% } %>
+            
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+    $('#table').DataTable({
+        scrollY: '200px',
+        scrollCollapse: true,
+        paging: false,
+    });
+});
+</script>
